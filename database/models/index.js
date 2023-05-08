@@ -1,12 +1,12 @@
 // register models, set up associations between tables, and generate barrel file for the models;
 
-const Course  = require('./Course');
-const Instructor  = require('./Instructor');
+const Task  = require('./Task');
+const Employee  = require('./Employee');
 
-Course.belongsTo(Instructor);
-Instructor.hasMany(Course);
+Task.belongsTo(Employee);
+Employee.hasMany(Task);
 
 module.exports = {
-  Course,
-  Instructor
+  Task,
+  Employee
 };

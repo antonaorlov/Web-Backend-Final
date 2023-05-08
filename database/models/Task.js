@@ -1,20 +1,19 @@
 const Sequelize = require('sequelize');
 const db = require('../db');
 
-const Course = db.define("course", {
+const Task = db.define("task", {
 
-  title: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-
-  timeslot: {
+  description: {
     type: Sequelize.STRING
   },
 
-  location: {
+ priority_level: {
     type: Sequelize.STRING
   },
+
+  completion:{
+    type: Sequelize.STRING
+  }
 
   // isOpen: {
   //   type: Sequelize.BOOLEAN,
@@ -24,4 +23,4 @@ const Course = db.define("course", {
 
 });
 
-module.exports = Course;
+module.exports = Task;
